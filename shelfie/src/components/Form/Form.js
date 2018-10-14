@@ -43,26 +43,40 @@ export default class Form extends Component {
 
     render() {
         return (
-            <div> Form 
+            <div className="SForm"> 
+                <ul>
+                <li>
                 <img src="default-img.png"/> 
+                </li>
+                <li>
                 <input value={this.state.imageValue} 
                         placeholder="Image URL" 
                         onChange={(e)=> this.imageUpdateLocal(e.target.value)}>
                 </input>
+                </li>
+                <li>
                 <input value={this.state.nameValue} 
                        placeholder="Product Name" 
                        onChange={(e)=> this.nameUpdateLocal(e.target.value)}>
                 </input>
+                </li>
+                <li>
                 <input value={this.state.priceValue} 
                        placeholder="Price" 
                        onChange={(e)=> this.priceUpdateLocal(e.target.value)}>
                 </input>
+                </li>
+                <li>
                 <button 
                        onClick={() => this.clear()}> Cancel 
                 </button>
+                </li>
+                <li>
                 <button 
                        onClick={() => this.props.addFn()}> Add to Inventory 
                 </button>
+                </li>
+                </ul>
             </div>
         )
     }

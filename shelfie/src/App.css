@@ -38,4 +38,38 @@
   height: 100px; 
   color: white; 
   background: red; 
+  font-size: 60px;
+  text-align: center; 
 }
+
+.SDashboard {
+  width: 50%; 
+  margin-top: 0px; 
+  margin-left: 25%; 
+  background: #282c34; 
+}
+
+.SProduct_container {
+  width: 100%; 
+  background: #a9dae7; 
+}
+
+.SProduct_container > ul > li > img {
+  width: 50%; 
+}
+
+.SForm {
+  width: 50%; 
+  background: #3b3d42; 
+}
+
+.SForm > ul > li > img {
+  width: 100%; 
+  height: 100%; 
+}
+
+.SProduct {
+  width: 50%; 
+}
+
+

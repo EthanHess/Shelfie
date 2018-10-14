@@ -27,6 +27,16 @@ class App extends Component {
     this.cancelHandler = this.cancelHandler.bind(this);
   }
 
+  componentDidMount() {
+    console.log('MOUNTED'); 
+    axios.get('/api/inventory').then(response => {
+      console.log('response ---', response.data); 
+      this.setState({ inventory: response.data }); 
+    }).catch(error => {
+      console.log('error fetching', error); 
+    }); 
+  }
+
   cancelHandler() {
     console.log('---CANCEL CALLED---')
     this.setState({
@@ -76,7 +86,7 @@ class App extends Component {
         nameUpdateFn={this.nameUpdateHandler} 
         cancelFn={this.cancelHandler}
         addFn={this.addInventory} />
-      <Dashboard />
+      <Dashboard products={this.state.inventory}/>
       </div>
     ); 
   }
